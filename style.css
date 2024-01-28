@@ -24,10 +24,11 @@ button {
   border: 3px solid rgb(65, 65, 65);
   margin: 0.1vh;
   background: none;
+
 }
 button input {
-  width: 5vh;
-  height: 5vh;
+  width: 4vh;
+  height: 4vh;
   vertical-align: middle;
   border-radius: 4vh;
   background: none;
@@ -36,8 +37,12 @@ input::-webkit-color-swatch {
   border-radius: 4vh;
 }
 button img {
-  width: 5vh;
-  height: 5vh;
+  width: 4vh;
+  height: 4vh;
+}
+.selected {
+    background: #b8b8b8;
+    border: solid 3px rgb(0, 0, 0);
 }
 div.colors {
   max-width: 100%;
