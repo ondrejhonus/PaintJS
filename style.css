@@ -46,8 +46,14 @@ button img {
 }
 div.colors {
   max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
-
+.slider{
+  display: flex;
+  vertical-align: middle;
+  
+}
 .copy {
   bottom: 0;
   left: 0;
@@ -56,4 +62,7 @@ div.colors {
   position: fixed;
   font-size: small;
   margin: 0;
+}
+p{
+  margin: auto;
 }

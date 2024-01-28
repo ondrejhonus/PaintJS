@@ -23,29 +23,60 @@
   <body>
     <header>
       <div class="colors">
-        <button class="color" id="color1" onclick="Selected('color1')"><img src="img/red.png" alt="red" /></button>
-        <button class="color" id="color2" onclick="Selected('color2')"><img src="img/lime.png" alt="lime" /></button>
-        <button class="color" id="color3" onclick="Selected('color3')"><img src="img/blue.png" alt="blue" /></button>
-        <button class="color" id="color4" onclick="Selected('color4')"><img src="img/green.png" alt="green" /></button>
-        <button class="color" id="color5" onclick="Selected('color5')"><img src="img/aqua.png" alt="aqua" /></button>
-        <button class="color" id="color6" onclick="Selected('color6')"><img src="img/orange.png" alt="orange" /></button>
-        <button class="color" id="color7" onclick="Selected('color7')"><img src="img/pink.png" alt="pink" /></button>
-        <button class="color" id="color8" onclick="Selected('color8')"><img src="img/purple.png" alt="purple" /></button>
-        <button class="color" id="color9" onclick="Selected('color9')"><img src="img/yellow.png" alt="yellow" /></button>
-        <button class="color" id="color10" onclick="Selected('color10')"><img src="img/brown.png" alt="brown" /></button>
-        <button class="color" id="color11" onclick="Selected('color11')"><img src="img/black.png" alt="black" /></button>
-        <button class="color" id="color12" onclick="Selected('color12')"><img src="img/eraser.png" alt="eraser" /></button>
-        <button class="color">
-          <label>
-            <input type="color" name="custom" id="customColor" /> Picker
-          </label>
+        <button class="color" id="color1" onclick="Selected('color1')">
+          <img src="img/red.png" alt="red" />
         </button>
-
+        <button class="color" id="color2" onclick="Selected('color2')">
+          <img src="img/lime.png" alt="lime" />
+        </button>
+        <button class="color" id="color3" onclick="Selected('color3')">
+          <img src="img/blue.png" alt="blue" />
+        </button>
+        <button class="color" id="color4" onclick="Selected('color4')">
+          <img src="img/green.png" alt="green" />
+        </button>
+        <button class="color" id="color5" onclick="Selected('color5')">
+          <img src="img/aqua.png" alt="aqua" />
+        </button>
+        <button class="color" id="color6" onclick="Selected('color6')">
+          <img src="img/orange.png" alt="orange" />
+        </button>
+        <button class="color" id="color7" onclick="Selected('color7')">
+          <img src="img/pink.png" alt="pink" />
+        </button>
+        <button class="color" id="color8" onclick="Selected('color8')">
+          <img src="img/purple.png" alt="purple" />
+        </button>
+        <button class="color" id="color9" onclick="Selected('color9')">
+          <img src="img/yellow.png" alt="yellow" />
+        </button>
+        <button class="color" id="color10" onclick="Selected('color10')">
+          <img src="img/brown.png" alt="brown" />
+        </button>
+        <button class="color" id="color11" onclick="Selected('color11')">
+          <img src="img/black.png" alt="black" />
+        </button>
+        <button class="color" id="color12" onclick="Selected('color12')">
+          <img src="img/eraser.png" alt="eraser" />
+        </button>
+        <button
+          class="color"
+          id="color13"
+          onclick="eraseCanvas(), Selected('color13')"
+        >
+          <img src="img/clear.png" alt="clear canvas" />
+        </button>
+        <button class="color" id="color14" onclick="Selected('color14')">
+          <input type="color" id="customColor" />
+          Picker
+        </button>
+        <div class="slider">
+          <input type="range" name="size" id="sizeSelect" value="4" />
+          <p id="sizeOutput">NaN</p>
+        </div>
       </div>
     </header>
-    <main>
-
-    </main>
+    <main></main>
     <script src="js/p5.js"></script>
     <script src="script.js"></script>
     <footer>

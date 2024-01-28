@@ -1,5 +1,7 @@
-let prevX, prevY;
+let pencilX, pencilY;
 let selectedColor = "black";
+let selectedStroke = document.getElementById("sizeSelect").value;
+let userSelectedCustom = false;
 
 function preload() {}
 function setup() {
@@ -7,18 +9,34 @@ function setup() {
   background(255);
 }
 function draw() {
-  if (mouseIsPressed) {
-    stroke(selectedColor);
-    strokeWeight(10);
-    if (prevX !== undefined && prevY !== undefined) {
-      line(prevX, prevY, mouseX, mouseY);
+  cursor("img/pencil2.png", 1, 16);
+  document.getElementById("sizeOutput").innerText = document.getElementById("sizeSelect").value;
+
+    if (userSelectedCustom) {
+      selectedColor = document.getElementById("customColor").value;
     }
-    prevX = mouseX;
-    prevY = mouseY;
+
+  if (
+    mouseIsPressed &&
+    mouseX > 0 &&
+    mouseX < width &&
+    mouseY > 0 &&
+    mouseY < height
+  ) {
+    selectedStroke = document.getElementById("sizeSelect").value;
+    stroke(selectedColor);
+    strokeWeight(selectedStroke);
+    line(pencilX, pencilY, mouseX, mouseY);
+    pencilX = mouseX;
+    pencilY = mouseY;
   } else {
-    prevX = undefined;
-    prevY = undefined;
+    pencilX = NaN;
+    pencilY = NaN;
   }
+}
+
+function eraseCanvas() {
+  background(255);
 }
 
 function Selected(colorId) {
@@ -29,67 +47,78 @@ function Selected(colorId) {
 
   document.getElementById(colorId).classList.add("selected");
 
+  if (colorId !== "color14") {
+    userSelectedCustom = false;
+  }
+
   switch (colorId) {
     case "color1":
       console.log("red selected");
-      selectedColor = 'red';
+      selectedColor = "red";
       break;
 
     case "color2":
       console.log("lime selected");
-      selectedColor = 'lime';
+      selectedColor = "lime";
       break;
 
     case "color3":
       console.log("blue selected");
-      selectedColor = 'blue';
+      selectedColor = "blue";
       break;
 
     case "color4":
       console.log("green selected");
-      selectedColor = 'green';
+      selectedColor = "green";
       break;
 
     case "color5":
       console.log("aqua selected");
-      selectedColor = 'aqua';
+      selectedColor = "aqua";
       break;
 
     case "color6":
       console.log("orange selected");
-      selectedColor = '#FFA500';
+      selectedColor = "#FFA500";
       break;
 
     case "color7":
       console.log("pink selected");
-      selectedColor = '#ff00ff';
+      selectedColor = "#ff00ff";
       break;
 
     case "color8":
       console.log("purple selected");
-      selectedColor = '#7300ff';
+      selectedColor = "#7300ff";
       break;
 
     case "color9":
       console.log("yellow selected");
-      selectedColor = 'yellow';
+      selectedColor = "yellow";
       break;
 
     case "color10":
       console.log("brown selected");
-      selectedColor = '#331405';
+      selectedColor = "#331405";
       break;
 
     case "color11":
       console.log("black selected");
-      selectedColor = 'black';
+      selectedColor = "black";
       break;
 
     case "color12":
       console.log("eraser selected");
-      selectedColor = 'white';
+      selectedColor = "white";
+      break;
+    case "color13":
+      console.log("clear selected");
       break;
 
+    case "color14":
+      console.log("user selected custom color");
+      userSelectedCustom = true;
+      break;
     default:
       break;
   }
