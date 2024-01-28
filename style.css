@@ -26,16 +26,7 @@ button {
   background: none;
 
 }
-button input {
-  width: 4vh;
-  height: 4vh;
-  vertical-align: middle;
-  border-radius: 4vh;
-  background: none;
-}
-input::-webkit-color-swatch {
-  border-radius: 4vh;
-}
+
 button img {
   width: 4vh;
   height: 4vh;
@@ -49,11 +40,7 @@ div.colors {
   display: flex;
   flex-wrap: wrap;
 }
-.slider{
-  display: flex;
-  vertical-align: middle;
-  
-}
+
 .copy {
   bottom: 0;
   left: 0;
@@ -65,4 +52,41 @@ div.colors {
 }
 p{
   margin: auto;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  height: 12px;
+  vertical-align: middle;
+  background: rgb(70, 170, 252); /* Change background color to black */
+  outline: none;
+  border-radius: 100px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 12px;
+  background: rgb(255, 255, 255); /* Change thumb color to white */
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+input[type=range]::-moz-range-thumb {
+  background: rgb(255, 255, 255); /* Change thumb color to white */
+  cursor: pointer;
+  border-radius: 100px;
+}
+button input {
+  width: 4vh;
+  height: 4vh;
+  align-items: center;
+  border-radius: 4vh;
+  background: none;
+}
+input::-webkit-color-swatch {
+  border-radius: 4vh;
+}
+.slider{
+  display: flex;
+  align-items: center;
 }

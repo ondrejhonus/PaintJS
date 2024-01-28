@@ -9,8 +9,9 @@ function setup() {
   background(255);
 }
 function draw() {
+  frameRate(144);
   cursor("img/pencil2.png", 1, 16);
-  document.getElementById("sizeOutput").innerText = document.getElementById("sizeSelect").value;
+  document.getElementById("sizeOutput").innerText = "Stroke: " + document.getElementById("sizeSelect").value;
 
     if (userSelectedCustom) {
       selectedColor = document.getElementById("customColor").value;
@@ -37,6 +38,9 @@ function draw() {
 
 function eraseCanvas() {
   background(255);
+}
+function bucket(){
+  background(selectedColor);
 }
 
 function Selected(colorId) {
@@ -99,7 +103,7 @@ function Selected(colorId) {
 
     case "color10":
       console.log("brown selected");
-      selectedColor = "#331405";
+      selectedColor = "#5e3a0a";
       break;
 
     case "color11":
@@ -119,6 +123,10 @@ function Selected(colorId) {
       console.log("user selected custom color");
       userSelectedCustom = true;
       break;
+    case "color15":
+        console.log("user selected bucket");
+        bucket();
+        break;
     default:
       break;
   }
