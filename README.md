@@ -33,7 +33,7 @@ so this time I tried my best to do some kind of Windows like paint software, but
 ✅ Color picker;\
 ✅ Paint tool;\
 ✅ Eraser;\
-❌ Paint tool size;\
+✅ Paint tool size;\
 ❌ Image import;\
 ❌ Image export;
 
