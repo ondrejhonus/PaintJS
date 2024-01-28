@@ -1,0 +1,38 @@
+html, body{
+    width: 100%;
+    margin: 0;
+}
+body{
+    background-color: #e3f2fd;
+}
+.color{
+    width: 5vh;
+}
+div.colors{
+    max-width: 100%;
+    background: rgb(190, 229, 255);
+
+}
+.customColor{
+    padding-top: 1.4vh;
+    vertical-align: bottom;
+    background: #000;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 3vh;
+    color: white;
+    font-size: small;
+
+}
+.customP{
+
+}
+.copy{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    position: fixed;
+    font-size: small;
+    margin: 0;
+}
