@@ -3,6 +3,10 @@ let selectedColor = "black";
 let selectedStroke = document.getElementById("sizeSelect").value;
 let userSelectedCustom = false;
 
+function exportImage() {
+  saveCanvas(canvas, "PaintJSExport", "png");
+}
+
 function preload() {}
 function setup() {
   canvas = createCanvas(window.innerWidth * 0.92, window.innerHeight * 0.89);

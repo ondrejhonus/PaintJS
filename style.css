@@ -90,3 +90,6 @@ input::-webkit-color-swatch {
   display: flex;
   align-items: center;
 }
+#export{
+  margin-left: 1vh;
+}

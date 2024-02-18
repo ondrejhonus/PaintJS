@@ -35,8 +35,7 @@ so this time I tried my best to do some kind of Windows like paint software, but
 ✅ Eraser;\
 ✅ Paint tool size;\
 ✅ Bucket;\
-❌ Image import;\
-❌ Image export;
+✅ Image export;\
 
 
 ## 🚀 Technologies ##

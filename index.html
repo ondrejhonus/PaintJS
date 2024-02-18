@@ -14,10 +14,16 @@
       name="twitter:description"
       content="It's a Windows paint knockoff ig"
     />
-    <meta property="og:image" content="https://github.com/ondrejhonus/PaintJS/blob/main/img/screenshot.png?raw=true">
-    <meta name="twitter:image" content="https://github.com/ondrejhonus/PaintJS/blob/main/img/screenshot.png?raw=true">
+    <meta
+      property="og:image"
+      content="https://github.com/ondrejhonus/PaintJS/blob/main/img/screenshot.png?raw=true"
+    />
+    <meta
+      name="twitter:image"
+      content="https://github.com/ondrejhonus/PaintJS/blob/main/img/screenshot.png?raw=true"
+    />
     <!--EOSOL-->
-    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="icon" type="image/x-icon" href="img/logo.png" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -75,7 +81,7 @@
           <img src="img/eraser.png" alt="eraser" />
         </button>
         <button class="color" id="color15" onclick="Selected('color15')">
-          <img src="img/bucket.png" alt="bucket"/>
+          <img src="img/bucket.png" alt="bucket" />
         </button>
         <button
           class="color"
@@ -92,6 +98,9 @@
           <input type="range" name="size" id="sizeSelect" value="4" />
           <p id="sizeOutput">Stroke: NaN</p>
         </div>
+        <button class="color" id="export" onclick="exportImage()">
+          <p>Export to png</p>
+        </button>
       </div>
     </header>
     <main></main>
